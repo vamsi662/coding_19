@@ -1,0 +1,132 @@
+.main-con {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right, #ffffff, #cffcf1, #defafe);
+  height: 100vh;
+}
+
+.timer-con {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.timer-display-con {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/digital-timer-elapsed-bg.png');
+  height: 580px;
+  width: 640px;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid green;
+}
+
+.timer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  padding: 0;
+}
+
+.min-sec {
+  font-size: 40px;
+  font-weight: 700;
+  color: #00d9f5;
+}
+
+.timer-status {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.timer-buttons-con {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.start-reset-con {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.play-pause-button {
+  outline: none;
+  background: none;
+  border: 0;
+  padding: 0;
+  margin-right: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.start-reset-image {
+  height: 40px;
+  width: 40px;
+}
+
+.play-reset-button-name {
+  font-size: 30px;
+  color: #0f172a;
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+.timer-title {
+  font-size: 25px;
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.set-timer-con {
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+}
+
+.decrement-timer-button {
+  color: #0f172a;
+  font-size: 40px;
+  padding: 0;
+  border: 0;
+  margin-right: 15px;
+  background: transparent;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.set-timer {
+  background-image: linear-gradient(to right, #4fffb0, #00d9f5);
+  padding: 5px 3px;
+  text-align: center;
+  width: 80px;
+  border-radius: 10px;
+  border: 0;
+  font-size: 25px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-right: 15px;
+  outline: none;
+}
+
+.increment-timer-button {
+  color: #0f172a;
+  font-size: 40px;
+  padding: 0;
+  border: 0;
+  margin-right: 10px;
+  background: transparent;
+  font-weight: 700;
+  cursor: pointer;
+}
