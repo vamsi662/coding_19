@@ -33,11 +33,12 @@ class DigitalTimer extends Component {
   playOrPause = () => {
     const {isTimerRunning} = this.state
     if (!isTimerRunning) {
-      this.stopTimer = setInterval(this.tick(), 1000)
+      this.stopTimer = setInterval(this.tick, 1000)
+      this.setState({isTimerRunning: true})
     } else {
-      clearInterval(this.stopTimer)
-      this.setState({isTimerRunning: false})
-    }
+			clearInterval(this.stopTimer)
+			this.setState({isTimerRunning: false})
+		}
   }
 
   tick = () => {
@@ -67,7 +68,7 @@ class DigitalTimer extends Component {
   }
 
   onReset = () => {
-    const {min, sec, timer} = this.state
+    const {min, sec} = this.state
     if (min === 0 && sec === 0) {
       this.setState({isTimerRunning: false, timer: 25, sec: 0, min: 25})
     }
@@ -77,18 +78,10 @@ class DigitalTimer extends Component {
 
   render() {
     const {timer, sec, isTimerRunning, min} = this.state
-    let convertSecondToString = ''
-    let convertMinutesToString = ''
-    if (sec < 10) {
-      convertSecondToString = '0'.concat(sec.toString())
-    } else {
-      convertSecondToString = sec.toString()
-    }
-    if (min < 10) {
-      convertMinutesToString = '0'.concat(min.toString())
-    } else {
-      convertMinutesToString = min.toString()
-    }
+    // const convertSecondToString = sec < 10 ? '0'.concat(sec.toString()) : sec
+    // const convertMinutesToString = min < 10 ? '0'.concat(min.toString()) : min
+    const convertSecondToString = sec < 10 ? `0${sec}` : sec
+		const convertMinutesToString = min < 10 ? `0${min}` : min
     const startAndPauseImgUrl = isTimerRunning
       ? 'https://assets.ccbp.in/frontend/react-js/pause-icon-img.png'
       : 'https://assets.ccbp.in/frontend/react-js/play-icon-img.png'
